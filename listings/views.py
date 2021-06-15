@@ -11,10 +11,10 @@ class AddListingview(CreateView):
     model = LandownerListingsModel
     form_class = LandownerListingForm
     template_name = 'listings/addlisting.html'
-    success_url = reverse_lazy('listings/listings')
+    success_url = reverse_lazy('listings')
 
 def index(request):
-    listings = Listing.objects.order_by('-list_date').filter(is_published=True)
+    listings = LandownerListingsModel.objects.order_by('-list_date').filter(is_published=True)
 
     paginator = Paginator(listings,3)
     page = request.GET.get('page')
@@ -26,8 +26,8 @@ def index(request):
     return render(request, 'listings/listings.html', context)
 
 
-def listing(request, listing_id ):
-    listing = get_object_or_404(Listing, pk=listing_id)
+def listing(request, listing_id):
+    listing = get_object_or_404(LandownerListingsModel, pk=listing_id)
 
     # getting internal photos
     internal_photos = []
@@ -37,14 +37,14 @@ def listing(request, listing_id ):
             internal_photos.append(photo)
 
     context = {
-        'listing' : listing,
+        'listing': listing,
         'internal_photos': internal_photos
     }
     return render(request, 'listings/listing.html', context)
 
 
 def search(request):
-    queryset_list = Listing.objects.order_by('-list_date')
+    queryset_list = LandownerListingsModel.objects.order_by('-list_date')
 
     #city
     if 'city' in request.GET:
@@ -63,7 +63,6 @@ def search(request):
         lot_size = request.GET['lot_size']
         if lot_size:
             queryset_list = queryset_list.filter(lot_size__lte = lot_size)
-
 
     #price
     if 'price' in request.GET:

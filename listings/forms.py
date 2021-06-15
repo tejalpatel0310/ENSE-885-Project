@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import  Select, FileInput,DateTimeInput
+from django.forms import Select, FileInput,DateTimeInput
 from django.contrib.auth.forms import UserCreationForm
 from .models import LandownerListingsModel
 
@@ -20,7 +20,7 @@ class LandownerListingForm(forms.ModelForm):
                    'photo_3':FileInput(attrs={'class':'form-control'}),
                    'list_date':DateTimeInput(attrs={'class':'form-control'}),}
         fields = ['title', 'address','city','state', 'zipcode','price','sqft','lot_size',
-                  'sale_type','photo_main','photo_1','photo_2','photo_3','is_published',
+                  'sale_type','contact_number','photo_main','photo_1','photo_2','photo_3','is_published',
                   'list_date','complete']
 
 

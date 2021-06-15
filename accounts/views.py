@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from listings.models import LandownerListingsModel
 # Create your views here.
 
 
@@ -65,4 +66,5 @@ def logout(request):
 
 
 def dashboard(request):
+
     return render(request, 'accounts/dashboard.html')
