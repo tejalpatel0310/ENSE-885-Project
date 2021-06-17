@@ -29,15 +29,24 @@
             <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
           <li
+<<<<<<< HEAD
                   {% if 'listings' in  request.path %}
                     class="nav-item active mr-3"
                   {% else %}
                     class="nav-item mr-3"
                   {% endif %}
+=======
+            {% if 'listings' in  request.path %}
+              class="nav-item active mr-3"
+            {% else %}
+              class="nav-item mr-3"
+            {% endif %}
+>>>>>>> 59884a17a2d04919bfa7298b25771eddb0b3788b
           >
             <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
           </li>
           <li
+<<<<<<< HEAD
                    {% if 'addlisting' in  request.path %}
                      class="nav-item active mr-3"
                    {% else %}
@@ -46,6 +55,17 @@
           >
             <a class="nav-link" href="{% url 'addlisting' %}">Add a Listing</a>
           </li>
+=======
+             {% if 'addlisting' in  request.path %}
+              class="nav-item active mr-3"
+            {% else %}
+              class="nav-item mr-3"
+            {% endif %}
+          >
+          <a class="nav-link" href="{% url 'addlisting' %}">Add a Listing</a>
+          </li>
+
+>>>>>>> 59884a17a2d04919bfa7298b25771eddb0b3788b
         </ul>
 
         <ul class="navbar-nav ml-auto">

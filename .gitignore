@@ -3,7 +3,15 @@
 *.pyc
 __pycache__/
 local_settings.py
+<<<<<<< HEAD
 db.sqlite3-journal
 \media
 venv
 \static
+=======
+db.sqlite3
+db.sqlite3-journal
+/media
+venv
+/static
+>>>>>>> 59884a17a2d04919bfa7298b25771eddb0b3788b

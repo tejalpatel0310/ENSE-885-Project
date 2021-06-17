@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/LandLocator.iml" filepath="$PROJECT_DIR$/.idea/LandLocator.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/landlocatorDemo.iml" filepath="$PROJECT_DIR$/.idea/landlocatorDemo.iml" />
+>>>>>>> 59884a17a2d04919bfa7298b25771eddb0b3788b
     </modules>
   </component>
 </project>

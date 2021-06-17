@@ -1,8 +1,17 @@
 from django.db import models
 from datetime import datetime
+<<<<<<< HEAD
 # Create your models here.
 
 #showing listing on pages
+=======
+from landowners.models import LandownerListingsModel
+# Create your models here.
+
+#showing listing on pages
+
+
+>>>>>>> 59884a17a2d04919bfa7298b25771eddb0b3788b
 class Listing(models.Model):
     class SaleType(models.TextChoices):
         FOR_RENT = 'for Rent'
@@ -28,6 +37,7 @@ class Listing(models.Model):
     list_date = models.DateTimeField(default=datetime.now, blank=True)
     def __str__(self):
         return self.title
+<<<<<<< HEAD
 
 
 
@@ -62,3 +72,5 @@ class LandownerListingsModel(models.Model):
     class Meta:
         ordering = ['complete']
 
+=======
+>>>>>>> 59884a17a2d04919bfa7298b25771eddb0b3788b
